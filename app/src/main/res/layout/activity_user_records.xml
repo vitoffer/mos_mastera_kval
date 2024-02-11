@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRecordsActivity">
+
+    <Spinner
+        android:id="@+id/filter_spinner"
+        android:layout_width="405dp"
+        android:layout_height="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/filter_btn"
+        android:layout_width="190dp"
+        android:layout_height="43dp"
+        android:text="фильтрация ^"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_spinner" />
+
+    <Button
+        android:id="@+id/sort_btn"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:text="\\/ Сортировка"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_spinner" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/records_list"
+        android:layout_width="406dp"
+        android:layout_height="368dp"
+        app:layout_constraintBottom_toTopOf="@+id/type_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/type_spinner"
+        android:layout_width="366dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/new_rec_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/new_rec_date"
+        android:layout_width="367dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Дата"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/new_rec_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/new_rec_category"
+        android:layout_width="368dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Категория"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/new_rec_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/new_rec_text"
+        android:layout_width="368dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Текст"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/new_rec_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/new_rec_btn"
+        android:layout_width="149dp"
+        android:layout_height="49dp"
+        android:text="Добавить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/filter_text"
+        android:layout_width="383dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
